@@ -1,0 +1,35 @@
+<!--@layout(/layout/basic/layout.html)-->
+<!--@css(/layout/basic/css/main.css)-->
+<div module="Popup_MultiPopup">
+    <!--
+        $banner_popup_no =
+        ※ 노출시킬 팝업의 ID를 숫자로 넣어주세요.
+    -->
+    {$popup}
+</div>
+<!--앱스토어>스마트배너>모바일에서 수정가능.-->
+<div app4you-smart-banner="smart-banner-admin-M00001" class="-xans-element- xans-smart-banner-admin xans-smart-banner-admin-MO00001" data-banner-name="배너1 영역"></div>
+<div app4you-smart-banner="smart-banner-admin-M00002" class="-xans-element- xans-smart-banner-admin xans-smart-banner-admin-MO00002" data-banner-name="배너2 영역"></div>
+<div style="height:606px;background-image:url('/KUAS/mobile_main/banner1.jpg')" class="background-cover-center banner">
+    <h1>KUAS KOREA</h1>
+</div>
+<div style="height:606px;background-image:url('/KUAS/mobile_main/banner2.jpg')" class="background-cover-center banner">
+    <h1>고려대학교 합성생물학회</h1>
+</div>
+<div style="height:606px;background-image:url('/KUAS/mobile_main/banner3.jpg')" class="background-cover-center banner">
+    <h1>CCP</h1>
+</div>
+<div style="height:606px;background-image:url('/KUAS/mobile_main/banner4.jpg')" class="background-cover-center banner">
+    <h1>홈페이지</h1>
+</div>
+<div style="height:606px;background-image:url('/KUAS/mobile_main/banner5.jpg')" class="background-cover-center banner">
+    <h1>KUAS KOREA</h1>
+</div>
+<p module="Layout_attendBanner">
+    <!--@css(/css/module/layout/attendBanner.css)-->
+    <!--
+        $stamp_type_url = /attend/stamp.html
+        $comment_type_url = /attend/comment.html
+    -->
+    <a href="{$attend_url}"><img src="//img.echosting.cafe24.com/skin/mobile_ko_KR/layout/bnr_attend.png" alt="출석체크 이벤트(매일매일 출석도장 쾅쾅쾅!)"></a>
+</p>

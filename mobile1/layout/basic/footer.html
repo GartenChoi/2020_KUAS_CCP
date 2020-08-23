@@ -1,0 +1,71 @@
+<footer id="footer" module="layout_footerPackage">
+	<div class="cboth bt_menu">
+		<a href="/shopinfo/guide.html">Guide</a>
+		<a href="/member/privacy.html"><strong>Privacy Policy</strong></a>
+		<a href="/member/mall_agreement.html">Agreement</a>
+		<a href="#none" onclick="javascript:isPCver();">PC ver</a>
+	</div><!-- //bt_menu -->
+
+	<div class="cboth bt_cscenter" module="Layout_footer">
+		<div class="bt_title">CS CENTER</div><!-- 하단 운영정보 수정하는곳 -->
+		<div class="call"><a href="tel:{$phone}">{$phone}</a></div>
+		{$runtime}<br /><!-- 운영시간 및 계좌번호는 [상점관리 - 기본정보관리 - 내쇼핑몰정보 - CS운영시간] 에 작성하시면 자동출력됩니다. -->
+	</div><!-- //bt_cscenter -->
+
+	<div class="cboth bt_address" module="Layout_footer">
+		COMPANY : {$company_name}&nbsp;&nbsp;/&nbsp;&nbsp;OWNER : {$president_name}<br />
+		ADDRESS : {$mall_zipcode} {$mall_addr1} {$mall_addr2}<br />
+		CALL CENTER : {$phone}&nbsp;&nbsp;/&nbsp;&nbsp;비영리단체번호 : {$company_regno}<br />
+<!--		통신판매업 신고번호 : {$network_regno}<br />-->
+<!--		개인정보책임관리자 : <a href="mailto:{$cpo_email}">{$cpo_name}({$cpo_email})</a><br /><br />-->
+	
+		Copyright &copy; {$mall_name}. All rights reserved.<br />
+		Hosting by 카페24(주)
+	</div><!-- //bt_address -->
+
+</footer>
+
+<div id="progressPaybar" style="display:none;">
+    <div id="progressPaybarBackground" class="layerProgress"></div>
+    <div id="progressPaybarView">
+        <p class="graph">현재 결제가 진행중입니다.</p>
+        <p class="txt">
+            본 결제 창은 결제완료 후 자동으로 닫히며, <br>
+            결제 진행 중에 본 결제 창을 닫으시면<br>
+            주문이 되지 않으니 <br>
+            결제 완료 될 때 까지 닫지 마시기 바랍니다.
+        </p>
+    </div>
+</div>
+
+<div module="Layout_multishopShipping" class="ec-base-layer typeModal">
+    <!--@css(/css/module/layout/multishopShipping.css)-->
+    <!--@js(/js/module/layout/multishopShipping.js)-->
+    <h1>WORLD SHIPPING</h1>
+    <div class="wrap worldshipLayer">
+        <p class="desc">PLEASE SELECT THE DESTINATION COUNTRY AND LANGUAGE :</p>
+        <div class="select">
+            <select module="Layout_multishopShippingCountrylist">
+                <option value="{$country_code}"{$country_default_selected}>SHIPPING TO : {$country_name}</option>
+                <option value="{$country_code}"{$country_default_selected}>SHIPPING TO : {$country_name}</option>
+            </select>
+        </div>
+        <div class="select">
+            <select module="Layout_multishopShippingLanguagelist">
+                <option value="{$shop_domain}"{$shop_default_selected}>LANGUAGE : {$shop_language_name}</option>
+                <option value="{$shop_domain}"{$shop_default_selected}>LANGUAGE : {$shop_language_name}</option>
+            </select>
+        </div>
+    </div>
+    <div class="ec-base-button gFull">
+        <a href="#none" class="btnSubmit">GO</a>
+    </div>
+    <a href="#none" class="btnClose">닫기</a>
+</div>
+<div class="btnTop" id="btnTop">
+    <a href="#">맨위로</a>
+</div>
+<div module="mobilequick_display">
+    {$quick_link}
+    {$quick_button}
+</div>

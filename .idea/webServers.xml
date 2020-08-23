@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="68f4a2e2-dcd2-41c1-b207-fef226a0e4b6" name="kuasroot" url="http://vmfhdirn128.cafe24.com">
+        <fileTransfer accessType="SFTP" host="jedo0328.cafe24.com" port="3822" sshConfigId="6c0366dc-4f2c-44a9-a8c8-d02f201ea632" sshConfig="cafe24">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

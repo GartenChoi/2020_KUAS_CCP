@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=yes">
+    <meta name="format-detection" content="telephone=no">
+    <title></title>
+    <!--@css(/layout/basic/css/common.css)-->
+    <!--@css(/layout/basic/css/ec-base-ui.css)-->
+    <!--@css(/layout/basic/css/ec-base-paginate.css)-->
+    <!--@css(/layout/basic/css/ec-base-help.css)-->
+    <!--@css(/layout/basic/css/ec-base-product.css)-->
+    <!--@css(/layout/basic/css/ec-base-button.css)-->
+    <!--@css(/layout/basic/css/ec-base-box.css)-->
+    <!--@css(/layout/basic/css/ec-base-layer.css)-->
+    <!--@css(/layout/basic/css/ec-base-tab.css)-->
+    <!--@css(/layout/basic/css/ec-base-tooltip.css)-->
+    <!--@css(/layout/basic/css/ec-base-table.css)-->
+    <!--@css(/layout/basic/css/ec-base-fold.css)-->
+    <!--@css(/layout/basic/css/ec-base-prdInfo.css)-->
+    <!--@css(/layout/basic/css/layout.css)-->
+	<link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,700&display=swap&subset=korean" rel="stylesheet">
+
+    <!-- 스마트디자인에서는 JQuery 1.4.4 버전이 내장되어있습니다. 추가로 호출하면 충돌이 생길 수 있습니다. -->
+    <!--@js(/layout/basic/js/common.js)-->
+	<!--@js(/layout/basic/js/mcommon.js)-->
+</head>
+<body id="layout">
+<div id="wrap">
+<!--@import(/layout/basic/sidebar.html)-->
+<hr class="layout">
+<div id="container">
+	<header id="header" class="header">
+		<div class="top_section">
+			<div class="top_logo"><a href="/"><img src="/KUAS/logo.png" style="height:50px;"></a></div>
+			<div class="right_area">
+				<div class="top_cate fold"><img src="/images/icon_cate.png" /></div>
+				<div module="Layout_orderBasketcount" class="top_cart"><a href="/order/basket.html"><img src="/images/icon_cart.png"><span class="basker_count">{$basket_count}</span></a></div>
+			</div><!-- //right_area -->
+		</div><!-- //top_section -->
+		<!--@import(/layout/basic/search.html)-->
+	</header><!-- //header -->
+	<hr class="layout">
+	<div id="contents">
+		<!--@contents-->
+	</div><!-- //contents -->
+	<hr class="layout">
+	<!--@import(/layout/basic/footer.html)-->
+</div><!-- //container -->
+</div><!-- //wrap -->
+<!--@css(/layout/basic/css/customizing.css)-->
+</body>
+</html>

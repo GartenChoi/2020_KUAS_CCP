@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PublishConfigData" autoUpload="Always" serverName="cafe24kuas" createEmptyFolders="true" autoUploadExternalChanges="true">
+    <serverData>
+      <paths name="cafe24">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/" local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="cafe24kuas">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/KUAS" local="$PROJECT_DIR$/KUAS" web="/" />
+            <mapping deploy="/sde_design/mobile1" local="$PROJECT_DIR$/mobile1" web="/" />
+            <mapping deploy="/sde_design/skin2" local="$PROJECT_DIR$/skin2" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="kuasroot">
+        <serverdata>
+          <mappings>
+            <mapping deploy="" local="$PROJECT_DIR$/" web="" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="withcatDEEP">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="withcatDEEP201608">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="withcatNIPA">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="workstation">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+    </serverData>
+    <option name="myAutoUpload" value="ALWAYS" />
+  </component>
+</project>

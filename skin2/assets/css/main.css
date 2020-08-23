@@ -1,0 +1,25 @@
+/* 190530   */
+@charset "utf-8";
+
+/* 메인 확장용 */
+#container,
+#contents {width:100% !important;}
+#header {height:0px !important;}
+.header_fixed .xans-layout-category .sub-category,
+.header_fixed {background-color:rgba(255, 255, 255, 0.7) !important; filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#B3FFFFFF,endColorstr=#B3FFFFFF) !important;}
+
+/* main */
+#footer {background-color:transparent !important;margin:-200px auto 0 !important;z-index:5;}
+#footer .utilMenu li,
+#footer .utilMenu li a,
+#footer .utilMenu li a strong,
+#footer .utilMenu li a:hover,
+#footer .bt_info,
+#footer .bt_info a,
+#footer .bt_info span ,
+#footer .bt_info strong {color:#fff !important;}
+.section_main_wrap img {width:100%;}
+
+
+
+

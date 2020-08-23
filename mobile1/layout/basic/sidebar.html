@@ -1,0 +1,56 @@
+<!--@css(/layout/basic/css/slideMenu.css)-->
+<!--@js(/layout/basic/js/slide_menu.js)-->
+<aside id="aside" module="layout_slidePackage">
+
+	<div class="cboth slide_section1">
+		<ul>
+			<li module="Layout_stateLogon" class="login"><a href="{$action_logout}">LOGOUT</a></li>
+			<li module="Layout_stateLogon"><a href="/member/modify.html">MODIFY</a></li>
+			<li module="Layout_stateLogoff" class="login"><a href="/member/login.html">LOGIN</a></li>
+			<li module="Layout_stateLogoff"><a href="/member/agreement.html">JOIN US</a></li>
+		</ul>
+	</div><!-- //slide_section1 -->
+
+	<div class="cboth slide_menu_a"><a href="/shopinfo/company.html">ABOUT</a></div><!-- 슬라이드 BRAND 링크 수정하는곳 -->
+
+	<div module="Layout_BoardInfo">
+		<div class="cboth slide_menu_a"><a href="{$link_board_list}">{$board_name}</a></div>
+		<div class="cboth slide_menu_a"><a href="{$link_board_list}">{$board_name}</a></div>
+		<div class="cboth slide_menu_a"><a href="{$link_board_list}">{$board_name}</a></div>
+	</div>
+
+	<div id="slideCateList" class="categoryCont">
+		<ul module="layout_category" class="categoryList">
+			<li id="cate{$cate_no}">
+				<a href="#none" class="cate" cate="{$param}">{$name|cut 25}</a>
+				<a href="{$link_product_list}" class="view"><span>ALL VIEW</span></a>
+			</li>
+			<li id="cate{$cate_no}">
+				<a href="#none" class="cate" cate="{$param}">{$name|cut 25}</a>
+				<a href="{$link_product_list}" class="view"><span>ALL VIEW</span></a>
+			</li>
+		</ul>
+	</div><!-- //categoryCont -->
+
+	<div class="cboth runtime" module="Layout_footer"><!-- 좌측 상점정보 수정하는곳 -->
+		<a href="tel:{$phone}">T. {$phone}</a>
+	</div><!-- //runtime -->
+
+	<div class="multishop" module="Layout_multishopList" id="slideMultishopList">
+		<ul module="multishop_listitem">
+			<li class="{$selected_class}">
+				<a href="//{$shop_domain}/">
+					<img src="//img.cafe24.com/img/common/global/{$language}_53x36.png" width="27" height="18" alt=""><span class="name"> {$shop_name}</span>
+				</a>
+			</li>
+			<li class="{$selected_class}">
+				<a href="//{$shop_domain}/">
+					<img src="//img.cafe24.com/img/common/global/{$language}_53x36.png" width="27" height="18" alt=""><span class="name"> {$shop_name}</span>
+				</a>
+			</li>
+		</ul>
+	</div><!-- //multishop -->
+
+	<a href="#none" class="btnClose"><img src="//img.echosting.cafe24.com/skin/mobile_ko_KR/layout/btn_close.png" width="13" alt="닫기"></a>
+	<div class="cboth pdt50"></div>
+</aside>

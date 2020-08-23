@@ -1,0 +1,111 @@
+<!--@layout(/layout/basic/layout.html)-->
+<!--@js(/layout/basic/js/countdown_start.js)-->
+<!--@js(/layout/basic/js/jquery.plugin.min.js)-->
+<!--@js(/layout/basic/js/jquery.countdown.min.js)-->
+<div id="titleArea" module="search_form">
+    <!--@css(/css/module/search/form.css)-->
+    <!--@js(/js/module/search/form.js)-->
+    <h2>검색결과(<span class="count">{$total_count}</span>)건</h2>
+    <span module="Layout_MobileAction">
+        <a href="#none" onclick="{$go_back}"><img src="//img.echosting.cafe24.com/skin/mobile_ko_KR/layout/btn_back.gif" width="33" alt="뒤로가기"></a>
+    </span>
+</div>
+<div module="search_form">
+    <div class="searchbox">
+        {$form.keyword}
+        <p class="button"><button type="submit" class="btnStrong">검색</button></p>
+        <button type="button" class="btnDelete">삭제</button>
+    </div>
+
+    <div class="inner">
+        {$form.order_by}
+    </div>
+
+    <p class="empty {$search_fail_display|display}">검색 결과가 없습니다.</p>
+</div>
+
+<div module="Search_Result" class="ec-base-product typeThumb pdt20">
+    <!--@js(/js/module/search/result.js)-->
+    <!--
+        $count = 10
+    -->
+    <ul class="prdList grid2">
+        <li>
+			<div class="box">
+            <div class="thumbnail">
+                <a href="{$link_product_detail}"><img src="{$image_medium}" id="{$image_medium_id}" alt="{$seo_alt_tag}"><span module="product_Imagestyle"><span class="prdIcon {$icon_class_name}" style="background-image:url('{$icon_url}');"></span></span></a>
+                <span class="wish">{$list_wish_icon}</span>
+            </div>
+            <div class="description">
+				<div class="timesale_box {$product_sale_display|display}"><span class="saletime"></span><span class="sale_per"></span></div>
+                <div class="name {$product_name_display|display}"><a href="{$link_product_detail}">{$product_name}</a></div>
+				<div class="summary_desc {$summary_desc|display}">{$summary_desc}</div>
+                <ul class="spec">
+					<li class="price_custom" id="custom{$disp_product_custom|numberformat}"><strike>{$disp_product_custom}</strike></li>
+                    <li class="price {$product_price_display|display} {$product_sale_strike}">{$disp_product_price} <span class="{$product_price_ref_display|display}">{$txt_product_price_ref}</span></li>
+					<li><span id="span_product_tax_type_text">{$product_tax_type_text}</span></li>
+                    <li class="price sale {$product_sale_display|display}">{$product_sale_price}</li>
+					<li class="price {$product_promotion_display|display}" style="padding:0;margin:0;">
+						<div class="discountPeriod {$product_promotion_display|display}">
+							<div class="layerDiscountPeriod">
+								<div class="inner">
+									<ul>
+										<li>{$product_promotion_dc_price}</li>
+										<li>{$product_promotion_start_date} ~ {$product_promotion_end_date}</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li class="icon">{$soldout_icon} {$stock_icon} {$new_icon} {$recommend_icon} {$product_icons} {$today_arrival_icon} {$pickup_icon} {$benefit_icons}</li>
+                    <li class="mileage {$mileage_icon_display}">{$mileage_value}</li>
+                    <li class="likeButton {$disp_likeprd_class}"><button type="button">{$disp_likeprd_icon}<strong>{$disp_likeprd_count}</strong></button></li>
+                </ul>
+            </div>
+			</div>
+        </li>
+        <li>
+			<div class="box">
+            <div class="thumbnail">
+                <a href="{$link_product_detail}"><img src="{$image_medium}" id="{$image_medium_id}" alt="{$seo_alt_tag}"><span module="product_Imagestyle"><span class="prdIcon {$icon_class_name}" style="background-image:url('{$icon_url}');"></span></span></a>
+                <span class="wish">{$list_wish_icon}</span>
+            </div>
+            <div class="description">
+				<div class="timesale_box {$product_sale_display|display}"><span class="saletime"></span><span class="sale_per"></span></div>
+                <div class="name {$product_name_display|display}"><a href="{$link_product_detail}">{$product_name}</a></div>
+				<div class="summary_desc {$summary_desc|display}">{$summary_desc}</div>
+                <ul class="spec">
+					<li class="price_custom" id="custom{$disp_product_custom|numberformat}"><strike>{$disp_product_custom}</strike></li>
+                    <li class="price {$product_price_display|display} {$product_sale_strike}">{$disp_product_price} <span class="{$product_price_ref_display|display}">{$txt_product_price_ref}</span></li>
+					<li><span id="span_product_tax_type_text">{$product_tax_type_text}</span></li>
+                    <li class="price sale {$product_sale_display|display}">{$product_sale_price}</li>
+					<li class="price {$product_promotion_display|display}" style="padding:0;margin:0;">
+						<div class="discountPeriod {$product_promotion_display|display}">
+							<div class="layerDiscountPeriod">
+								<div class="inner">
+									<ul>
+										<li>{$product_promotion_dc_price}</li>
+										<li>{$product_promotion_start_date} ~ {$product_promotion_end_date}</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li class="icon">{$soldout_icon} {$stock_icon} {$new_icon} {$recommend_icon} {$product_icons} {$today_arrival_icon} {$pickup_icon} {$benefit_icons}</li>
+                    <li class="mileage {$mileage_icon_display}">{$mileage_value}</li>
+                    <li class="likeButton {$disp_likeprd_class}"><button type="button">{$disp_likeprd_icon}<strong>{$disp_likeprd_count}</strong></button></li>
+                </ul>
+            </div>
+			</div>
+        </li>
+    </ul>
+</div>
+
+<div module="search_paging" class="ec-base-paginate typeList">
+    <a href="{$param_before}" class="btnPrev">이전 페이지</a>
+    <ol>
+        <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+        <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+    </ol>
+    <a href="{$param_next}" class="btnNext">다음 페이지</a>
+</div>

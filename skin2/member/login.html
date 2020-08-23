@@ -1,0 +1,70 @@
+<!--@layout(/layout/layout.html)-->
+<!--@import(/layout/header/login.html)-->
+<div class="container">
+    <div module="member_login" class="ec-base-box typeThin">
+        <!--@css(/assets/css/module/member/login.css)-->
+        <!--
+            $defaultReturnUrl = /index.html
+            $forbidIpUrl = member/admin_fail.html
+        -->
+        <div class="login">
+            <fieldset>
+                <legend>회원로그인</legend>
+                <div class="login_title">ID</div>
+                <label class="id ePlaceholder" title="아이디">{$form.member_id}</label>
+                <div class="login_title">PASSWORD</div>
+                <label class="password ePlaceholder" title="비밀번호">{$form.member_passwd}</label>
+                <div class="cboth security">
+                    {$form.member_check_save_id}
+                    {$form.member_check_secret_connect}
+                    <ul>
+                        <li><a href="/member/id/find_id.html">FIND ID</a></li>
+                        <li>/</li>
+                        <li><a href="/member/passwd/find_passwd_info.html">FIND PASSWORD</a></li>
+                    </ul>
+                </div>
+                <ul class="snsArea">
+                    <li class="{$display_naver|display}">
+                        <a href="#" onclick="{$naver_func_login}"><img src="//img.echosting.cafe24.com/skin/base_ko_KR/member/btn_naver_login.gif" alt="네이버 로그인" /></a>
+                    </li>
+                    <li class="{$display_facebook|display}">
+                        <a href="#" onclick="{$facebook_func_login}"><img src="//img.echosting.cafe24.com/skin/base_ko_KR/member/btn_facebook_login.gif" alt="Facebook으로 로그인" /></a>
+                    </li>
+                    <li class="{$display_google|display}">
+                        <a href="#" onclick="{$google_func_login}"><img src="//img.echosting.cafe24.com/skin/base_ko_KR/member/btn_google_login.gif" alt="구글 로그인" /></a>
+                    </li>
+                    <li class="{$display_kakao|display}">
+                        <a href="#" onclick="{$kakao_func_login}"><img src="//img.echosting.cafe24.com/skin/base_ko_KR/member/btn_kakao_login.gif" alt="카카오계정 로그인" /></a>
+                    </li>
+                    <li class="{$display_line|display}">
+                        <a href="#" onclick="{$line_func_login}"><img src="//img.echosting.cafe24.com/skin/base_ko_KR/member/btn_line_login.gif" alt="LINE 로그인" /></a>
+                    </li>
+                </ul>
+                <a href="#" class="cboth btnLogin_bk" onclick="{$action_func_login}">LOGIN</a>
+
+                <div class="join_box">
+                    아직 회원이 아니신가요?<br />회원가입을 하시면 다양하고 특별한 혜택이 준비되어 있습니다.<br /><br />
+                    <a href="/member/join.html" class="btnLogin_wh">SIGN UP</a>
+                </div>
+
+                <div class="join_box {$display_nomember|display}" id="noMemberWrap">
+                    <br /><br />비회원의 경우, 해당버튼을 통해 주문이 가능합니다.<br /><br />
+                    <a href="{$returnUrl}" class="btnLogin_wh" onclick="{$action_nomember_order}">NON-MEMBER ORDER</a>
+                </div>
+            </fieldset>
+        </div>
+    </div>
+    <div module="MyShop_OrderHistoryNologin" class="ec-base-box typeThin">
+        <!--@css(/assets/css/module/myshop/orderHistoryNologin.css)-->
+        <!--
+            $orderDetailUrl = /myshop/order/list.html
+        -->
+        <p>비회원의 경우, 주문시의 주문번호로 주문조회가 가능합니다.</p>
+        <dl class="ec-base-desc gBlank20">
+            <dt>{$form_label.order_name}</dt><dd>{$form.order_name}</dd>
+            <dt>{$form_label.order_id}</dt><dd>{$form.order_id}</dd>
+            <dt>{$form_label.order_password}</dt><dd>{$form.order_password}</dd>
+        </dl>
+        <p class="ec-base-button gColumn"><button type="submit" class="btnLogin_wh">ORDER SEARCH</button></p>
+    </div>
+</div>
